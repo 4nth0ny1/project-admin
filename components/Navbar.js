@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex flex-row justify-between py-6 px-4 bg-blue-400">
+      <div className="flex flex-row justify-between py-6 px-4 border-2 border-bottom">
         <h2 className="text-2xl">NextJS Project Admin App</h2>
         <ul className="flex flex-row">
           <li className="px-4">
