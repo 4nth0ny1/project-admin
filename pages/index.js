@@ -1,4 +1,4 @@
-import UndrawAnalysisSvg from "../components/UndrawAnalysisSvg";
+import UndrawAnalysisSvg from "../components/svgs/UndrawAnalysisSvg";
 import CardSection from "../components/CardSection";
 import LoginLogoutContainer from "@/components/LoginLogoutContainer";
 import { useUser } from "@auth0/nextjs-auth0/client";

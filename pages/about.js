@@ -1,4 +1,4 @@
-import UndrawTeamUpSvg from "@/components/UndrawTeamUpSvg";
+import UndrawTeamUpSvg from "@/components/svgs/UndrawTeamUpSvg";
 
 export default function AboutPage() {
   return (
