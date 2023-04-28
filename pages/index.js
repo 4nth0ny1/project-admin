@@ -23,7 +23,7 @@ export default function HomePage() {
       </div>
       <UndrawAnalysisSvg />
       <CardSection />
-      <div className="flex flex-row justify-center bg-purple-500 text-white p-32">
+      <div className="flex flex-row justify-center bg-[#6c63ff] text-white p-32">
         <p className="w-1/2 text-center text-2xl">
           Whether it's a tech, business, or your personal life, Project Admin is
           your one stop shop for optimization and hitting your goals on time
