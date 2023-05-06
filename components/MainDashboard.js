@@ -1,35 +1,33 @@
+import { getAllTasks } from "../dummy-data.js";
+
 // create a new table for each date and it's corresponding tasks.
 
 export default function MainDashboard() {
+  const data = getAllTasks();
+
   return (
-    <div className="border-2 my-4">
-      <h2>date</h2>
-      <table class="table-auto w-full">
-        <thead className="bg-slate-400">
-          <tr>
-            <th>Song</th>
-            <th>Artist</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>Witchy Woman</td>
-            <td>The Eagles</td>
-            <td>1972</td>
-          </tr>
-          <tr>
-            <td>Shining Star</td>
-            <td>Earth, Wind, and Fire</td>
-            <td>1975</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <>
+      {data.map((d) => (
+        <div className="border-2 my-4" key={d.id}>
+          <div>Completion Date: {d.completionDate}</div>
+          <table className="table-auto w-full">
+            <thead className="bg-slate-400">
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Difficulty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{d.title}</td>
+                <td>{d.description}</td>
+                <td>{d.difficulty}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ))}
+    </>
   );
 }
