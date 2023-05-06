@@ -1,9 +1,9 @@
-import { getAllTasks } from "../dummy-data.js";
+import { sortedTasksByDate } from "../dummy-data.js";
 
 // create a new table for each date and it's corresponding tasks.
 
 export default function MainDashboard() {
-  const data = getAllTasks();
+  const data = sortedTasksByDate();
 
   return (
     <>
