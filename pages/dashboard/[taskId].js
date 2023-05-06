@@ -1,6 +1,7 @@
 import TaskDetail from "@/components/task-detail/TaskDetail";
 import { useRouter } from "next/router";
 import { getTaskById } from "../../dummy-data.js";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 export default function TaskDetailPage() {
   const router = useRouter();
@@ -22,3 +23,5 @@ export default function TaskDetailPage() {
     </>
   );
 }
+
+export const getServerSideProps = withPageAuthRequired();
