@@ -33,3 +33,7 @@ export function sortedTasksByDate() {
   });
   return sortedTasks;
 }
+
+export function getTaskById(id) {
+  return DUMMY_TASKS.find((task) => task.id === id);
+}

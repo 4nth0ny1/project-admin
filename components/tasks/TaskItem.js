@@ -1,14 +1,15 @@
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
-export default function TaskItem({ task }) {
+export default function TaskItem(props) {
+  const { id, title, description, difficulty, completionDate } = props;
   return (
     <>
-      <tbody key={task.id}>
+      <tbody key={id}>
         <tr className="border-b-2 text-center">
-          <td>{task.title}</td>
-          <td>{task.description}</td>
-          <td>{task.difficulty}</td>
-          <td>{task.completionDate}</td>
+          <td>{title}</td>
+          <td>{description}</td>
+          <td>{difficulty}</td>
+          <td>{completionDate}</td>
           <td className="text-center text-yellow-600">
             <AiFillEdit />
           </td>

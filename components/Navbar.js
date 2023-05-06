@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LoginLogoutContainer from "./LoginLogoutContainer";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import { GrTask } from "react-icons/gr";
 
 export default function Navbar() {
   const { user, error, isLoading } = useUser();
@@ -11,7 +12,9 @@ export default function Navbar() {
   return (
     <>
       <div className="flex flex-row justify-between py-6 px-4">
-        <h2 className="text-2xl">NextJS Project Admin App</h2>
+        <h2 className="text-2xl pl-4">
+          <GrTask />
+        </h2>
         <ul className="flex flex-row">
           <li className="px-4 flex flex-col justify-center">
             <Link href="/">Home</Link>
