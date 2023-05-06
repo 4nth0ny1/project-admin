@@ -10,8 +10,7 @@ export default function MainDashboard() {
         <table className="table-auto w-full">
           <thead className="bg-[#6c63ff]">
             <tr>
-              <th>Title</th>
-              <th>Description</th>
+              <th className="py-4">Title</th>
               <th>Difficulty</th>
               <th>Completion Date</th>
               <th></th>
