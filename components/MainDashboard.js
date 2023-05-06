@@ -1,4 +1,5 @@
 import { sortedTasksByDate } from "../dummy-data.js";
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
 // create a new table for each date and it's corresponding tasks.
 
@@ -15,8 +16,8 @@ export default function MainDashboard() {
               <th>Description</th>
               <th>Difficulty</th>
               <th>Completion Date</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           {data.map((d) => (
@@ -26,8 +27,12 @@ export default function MainDashboard() {
                 <td>{d.description}</td>
                 <td>{d.difficulty}</td>
                 <td>{d.completionDate}</td>
-                <td>EditIcon</td>
-                <td>DelIcon</td>
+                <td className="text-center text-yellow-600">
+                  <AiFillEdit />
+                </td>
+                <td className="text-center text-red-600">
+                  <AiFillDelete />
+                </td>
               </tr>
             </tbody>
           ))}
